@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movies DB</title>
+    <link rel="stylesheet" href="Style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">Movies DB</div>
+      <h1>Movies DB</h1>
+    </header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="Movie gallery.html">Movie Gallery</a>
+    </nav>
+
+    <!-- Botón de categorías centrado -->
+    <div class="filter-container">
+      <select id="categoryFilter">
+        <option value="all">All Genres</option>
+        <option value="action">Action</option>
+        <option value="comedy">Comedy</option>
+        <option value="drama">Drama</option>
+        <option value="horror">Horror</option>
+      </select>
+    </div>
+
+    <div class="grid-container" id="movieGrid">
+      <!-- Action Movies -->
+      <div class="movie-card" data-genre="action">
+        <img
+          class="movie-img"
+          src="Imagenes/CABALLERO-OSCURO-JOKER.jpg"
+          alt="The dark knight returns"
+        />
+        <h3>The dark knight returns</h3>
+        <p>One of the best superheroes movies of all time</p>
+        <button class="favorite-btn">Favorite</button>
+      </div>
+      <div class="movie-card" data-genre="action">
+        <img
+          class="movie-img"
+          src="Imagenes/Pulp fiction.jpg"
+          alt="Pulp fiction"
+        />
+        <h3>Pulp fiction</h3>
+        <p>
+          The most popular movie of Quentin Tarantino, exciting and explosive!
+        </p>
+        <button class="favorite-btn">Favorite</button>
+      </div>
+
+      <!-- Comedy Movies -->
+      <div class="movie-card" data-genre="comedy">
+        <img class="movie-img" src="Imagenes/Shrek.jpeg" alt="Shrek" />
+        <h3>Shrek</h3>
+        <p>One of the most comical animated movies of all time</p>
+        <button class="favorite-btn">Favorite</button>
+      </div>
+      <div class="movie-card" data-genre="comedy">
+        <img class="movie-img" src="Imagenes/Up.jpg" alt="Up" />
+        <h3>Up</h3>
+        <p>A comedy animated movie that will touch your heart</p>
+        <button class="favorite-btn">Favorite</button>
+      </div>
+
+      <!-- Drama Movies -->
+      <div class="movie-card" data-genre="drama">
+        <img
+          class="movie-img"
+          src="Imagenes/En busca de la felicidad.webp"
+          alt="En busca de la felicidad"
+        />
+        <h3>The pursuit of happiness</h3>
+        <p>A deep and moving drama about bond parent and child.</p>
+        <button class="favorite-btn">Favorite</button>
+      </div>
+      <div class="movie-card" data-genre="drama">
+        <img class="movie-img" src="Imagenes/Resplandor.jpg" alt="Resplandor" />
+        <h3>Eternal sunshine of a spotless mind</h3>
+        <p>A thought-provoking drama that tugs at your heartstrings.</p>
+        <button class="favorite-btn">Favorite</button>
+      </div>
+
+      <!-- Horror Movies -->
+      <div class="movie-card" data-genre="horror">
+        <img
+          class="movie-img"
+          src="Imagenes/La masacre de texas.jpg"
+          alt="Horror Movie 1"
+        />
+        <h3>The texas chainsaw massacre</h3>
+        <p>A terrifying horror film to keep you on the edge of your seat.</p>
+        <button class="favorite-btn">Favorite</button>
+      </div>
+      <div class="movie-card" data-genre="horror">
+        <img
+          class="movie-img"
+          src="Imagenes/Pesadilla en elm.jpg"
+          alt="Horror Movie 2"
+        />
+        <h3>Nightmare on elm street</h3>
+        <p>A chilling horror movie that will haunt your dreams.</p>
+        <button class="favorite-btn">Favorite</button>
+      </div>
+    </div>
+
+    <div id="movieModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img
+          id="modalMovieImage"
+          class="modal-movie-img"
+          src=""
+          alt="Movie Image"
+        />
+        <h2 id="movieTitle"></h2>
+        <p id="movieDescription"></p>
+      </div>
+    </div>
+
+    <script src="Categoryfilter.js"></script>
+    <script src="Modal.js"></script>
+    <script src="Favorite.js"></script>
+  </body>
+</html>
